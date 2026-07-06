@@ -40,7 +40,7 @@ Customer contribution to monthly revenue
 
 ##
 
-![Top Customers](screenshots/Top customer per month.png)
+![Top Customers](screenshots/Top%20customer%20per%20month.png)
 
 
-![Cummulative Monthly revenue](screenshots/Cummulative Monthly revenue.png)
+![Cummulative Monthly revenue](screenshots/Cummulative%20monthly%20Revenue.png)
