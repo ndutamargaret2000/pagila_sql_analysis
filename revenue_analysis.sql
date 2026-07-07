@@ -1,7 +1,7 @@
 --1...Monthly revenue
 
 
-SELECT TO_CHAR( payment_date,'Mon-YYYY') AS month,
+SELECT DATE_TRUNC( 'month', payment_date) AS month,
         SUM(amount) AS revenue
 FROM payment
 GROUP BY month
@@ -10,13 +10,13 @@ ORDER BY month;
 --2...Monthly revenue with running total
 
 WITH monthly_revenue AS (
-    SELECT  TO_CHAR( payment_date,'Mon-YYYY') AS month,
+    SELECT DATE_TRUNC('month', payment_date) AS month,
         SUM(amount) AS revenue
 FROM payment
 GROUP BY month
 ORDER BY month
 )
-SELECT month,
+SELECT TO_CHAR( month,'Mon-YYYY'),
        revenue,
        SUM(revenue) OVER (ORDER BY month) AS running_total
        FROM monthly_revenue;
